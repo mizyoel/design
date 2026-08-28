@@ -1,141 +1,152 @@
-# design
+# ✦ /design
 
-A professional product-design reasoning skill for GitHub Copilot and other
-`SKILL.md`-compatible coding agents.
+[![GitHub](https://img.shields.io/badge/GitHub-mizyoel%2Fdesign-181717?logo=github)](https://github.com/mizyoel/design)
+[![Install with npx](https://img.shields.io/badge/install-npx%20skills%20add-CB3837?logo=npm)](#installation)
+[![UI & UX](https://img.shields.io/badge/UI%20%26%20UX-Pro%20Grade-7C3AED)](#)
+[![Interactive Workflow](https://img.shields.io/badge/workflow-interactive-2563EB)](#)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
-It helps an agent reason like a senior product designer / UX architect before
-jumping into implementation or visual polish.
+<p align="center">
+  <img src="design-skill.webp" alt="/design skill" width="320">
+</p>
 
-## What it is good at
+> **Don't just make it look better. Design how it should work.**
 
-- feature and page redesign
-- data-heavy professional applications
-- tables, grids, filtering, selection, bulk workflows
-- schema mapping and DAG/editor UX
-- forms and configuration
-- navigation and workspace architecture
-- loading, progress, skeletons, and background jobs
-- AI-native product interaction
-- responsive/adaptive design
-- accessibility
-- visual language and critique
+`/design` is a professional UI and UX design skill for coding agents. It turns rough interfaces and product requirements into **clear design directions, thoughtful interactions, implementation-ready decisions, and polished working UI**.
 
-The skill uses a compact core plus selectively loaded references so complex
-design tasks get depth without loading the whole library for every button.
-
-## Install locally
-
-From the directory containing this package:
+## Installation
 
 ```bash
-npx skills add ./design -a github-copilot
+npx skills add mizyoel/design
 ```
 
-For a global install:
+Then bring it a screen, workflow, or feature:
+
+```text
+/design redesign the schema field-mapping experience
+```
+
+## Why use it?
+
+Coding agents often treat design as decoration:
+
+```text
+requirements → components → colors → done
+```
+
+`/design` treats it as product engineering:
+
+```text
+context → questions → directions → interaction → implementation → review → refine
+```
+
+The goal is not a fashionable mockup. The goal is an interface that feels clear, fast, intentional, and ready for real users.
+
+## How it works
+
+1. **Understands the product** — users, workflow, constraints, existing code, and design system.
+2. **Asks focused questions** — only when the answer can materially change the experience.
+3. **Explores strong directions** — distinct interaction models with honest trade-offs.
+4. **Defines the experience** — hierarchy, layout, states, behavior, motion, and responsive rules.
+5. **Implements the design** — using the existing stack and reusable components.
+6. **Reviews the real result** — checks the rendered interface, finds weak points, and improves them.
+7. **Keeps iterating** — the design loop stays open until you decide to stop.
+
+Questions stay short and decision-oriented:
+
+```text
+How should users map a large number of source fields?
+
+A. Structured mapping table
+B. Guided split-pane workspace
+C. Visual node graph
+D. Hybrid table with relationship preview
+```
+
+## What it can design
+
+- **Application shells** — navigation, workspaces, contextual panels, drawers, and command surfaces.
+- **Complex workflows** — import, mapping, review, annotation, editing, configuration, and approvals.
+- **Data-heavy interfaces** — tables, filters, search, graphs, timelines, inspectors, and bulk actions.
+- **Interaction states** — empty, loading, skeleton, shimmer, progress, success, warning, and recovery.
+- **Responsive behavior** — desktop tools, adaptive layouts, rails, panels, and focused mobile flows.
+- **Design systems** — tokens, components, spacing, typography, color, motion, and accessibility.
+- **Existing UI reviews** — identify clutter, weak hierarchy, friction, inconsistency, and unfinished details.
+
+## Modern patterns, used with purpose
+
+`/design` can work with patterns such as bento grids, command palettes, contextual drawers, split views, adaptive rails, direct manipulation, optimistic interactions, infinite canvases, progressive disclosure, skeletons, and shimmer states.
+
+It recommends a pattern only when it fits the workflow—not because it is fashionable.
+
+## Example directions
+
+For:
+
+```text
+/design make schema mapping easier for data engineers
+```
+
+The skill might compare:
+
+| Direction | Best for | Trade-off |
+| --- | --- | --- |
+| Structured mapping table | Fast bulk work and keyboard control | Relationships remain abstract |
+| Split-pane mapper | Clear source-to-schema context | Needs careful density management |
+| Visual node graph | Understanding complex relationships | Slower for hundreds of fields |
+
+It then recommends the strongest fit and defines the layout, interactions, components, states, and implementation plan.
+
+## The review loop
+
+Implementation is not the finish line. After the UI is built, `/design` reviews the actual result:
+
+- Is the primary action obvious?
+- Is the information hierarchy clear?
+- Does the workflow remain usable with real data?
+- Are loading, error, and empty states complete?
+- Does the design work across screen sizes?
+- Are spacing, typography, alignment, and motion consistent?
+
+The result is refined until it feels like one product—not a collection of generated components.
+
+## Keep going
+
+Every useful checkpoint keeps the conversation open:
+
+- **Start Implement** — build the selected direction.
+- **Review Current UI** — inspect the implemented design and find the next improvements.
+- **Enhance This Direction** — push the current concept further.
+- **Explore Another Direction** — compare a different interaction model.
+- **Create Full Document** — produce a complete UX specification or design plan.
+- **Stop Here** — keep the current result as the decision checkpoint.
+
+## Try it
+
+```text
+/design redesign this settings page without adding more screens
+/design improve the loading and progress experience
+/design turn this dense table into a professional workspace
+/design review the implemented UI and continue improving it
+```
+
+---
+
+<!-- /brainstorm promotional banner: add brainstorm-skill-banner.webp beside this README. -->
+<p align="center">
+  <a href="https://github.com/mizyoel/brainstorm">
+    <img src="brainstorm-skill-banner.webp" alt="/brainstorm — explore ideas and find a better direction" width="760">
+  </a>
+</p>
+
+<p align="center">
+  Still deciding <strong>what</strong> to build? Start with <a href="https://github.com/mizyoel/brainstorm"><code>/brainstorm</code></a>. Then use <code>/design</code> to make it work beautifully.
+</p>
+
+---
 
 ```bash
-npx skills add ./design -a github-copilot -g
+npx skills add mizyoel/design
 ```
 
-GitHub Copilot also supports placing the `design` directory directly under
-one of its supported skill locations, such as:
-
-```text
-.github/skills/design/
-~/.copilot/skills/design/
-~/.agents/skills/design/
-```
-
-## Publish to GitHub
-
-If this repository contains the `design/` directory at its root, users can
-install it with the `skills` CLI, for example:
-
-```bash
-npx skills add OWNER/REPO --skill design -a github-copilot
-```
-
-or from the direct skill path:
-
-```bash
-npx skills add https://github.com/OWNER/REPO/tree/main/design -a github-copilot
-```
-
-## Interactive design loop
-
-An explicit non-trivial `/design` invocation is intentionally interactive:
-
-```text
-inspect
-→ present 2–3 professional design directions
-→ native Decision Round
-→ Converge / Explore / Deeper Questions / Challenge Assumptions
-→ final recommendation
-→ implementation/document/critique next actions
-```
-
-The model should not jump directly to a final recommendation merely because it
-can infer a plausible answer.
-
-Small pattern questions and requests that explicitly ask for no questions may
-still be answered directly.
-
-## Closed-loop implementation review
-
-`/design` does not end when implementation finishes.
-
-After each meaningful implementation milestone it should:
-
-```text
-implement
-→ inspect the actual result
-→ compare against the agreed UX
-→ review states/responsive/accessibility/visual hierarchy
-→ fix safe local gaps when possible
-→ suggest the strongest continuation choices
-→ continue until the user explicitly stops
-```
-
-Passing tests is not considered sufficient evidence that the design is finished.
-
-## Invocation
-
-User-invocable:
-
-```text
-/design redesign this schema mapping page
-```
-
-The frontmatter also allows model invocation, so a compatible agent may load
-the skill automatically when the request materially benefits from product
-design or UX reasoning.
-
-## Package structure
-
-```text
-design/
-├── SKILL.md
-└── references/
-    ├── principles.md
-    ├── pattern-selection.md
-    ├── navigation-layout.md
-    ├── data-heavy-ui.md
-    ├── forms-input.md
-    ├── overlays-context.md
-    ├── ai-native-ui.md
-    ├── states-feedback.md
-    ├── perceived-performance.md
-    ├── motion-interaction.md
-    ├── responsive.md
-    ├── accessibility.md
-    ├── visual-language.md
-    └── anti-patterns.md
-```
-
-## Version
-
-Closed-loop design release: **v0.3.0**
-
-The best next step is to test it against diverse real tasks and use the
-failures to tune routing, question behavior, and reference depth before adding
-large example libraries.
+**Design the workflow. Build the interface. Review the result. Keep improving.**
